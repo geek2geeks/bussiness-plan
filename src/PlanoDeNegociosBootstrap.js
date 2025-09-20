@@ -55,7 +55,7 @@ const PlanoDeNegociosBootstrap = () => {
     { id: 'problema', label: 'O Problema', icon: AlertTriangle },
     { id: 'solucao', label: 'Nossa Solução', icon: CheckCircle },
     { id: 'modelo', label: 'Modelo de Negócio', icon: DollarSign },
-    { id: 'equipe', label: 'Equipe & Custos', icon: Users },
+    { id: 'equipe', label: 'Equipa & Custos', icon: Users },
     { id: 'cronograma', label: 'Cronograma', icon: Calendar },
     { id: 'precisao', label: 'Precisão dos Dados', icon: Database },
     { id: 'riscos', label: 'Riscos & Críticas', icon: AlertTriangle },
@@ -133,7 +133,7 @@ const PlanoDeNegociosBootstrap = () => {
               </p>
               <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                 <p className="font-semibold text-green-800">
-                  Como o "Waze dos crimes" - você consulta um endereço e recebe análise de segurança baseada em dados reais.
+                  Como o "Waze dos crimes" - consulta-se uma morada e recebe-se análise de segurança baseada em dados reais.
                 </p>
               </div>
             </div>
@@ -147,7 +147,7 @@ const PlanoDeNegociosBootstrap = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-green-500 mt-1" size={20} />
-                  <span>Know-how técnico da equipe fundadora</span>
+                  <span>Know-how técnico da equipa fundadora</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-green-500 mt-1" size={20} />
@@ -155,7 +155,7 @@ const PlanoDeNegociosBootstrap = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-green-500 mt-1" size={20} />
-                  <span>Zero competição direta no Brasil</span>
+                  <span>Zero concorrência directa no Brasil</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-green-500 mt-1" size={20} />
@@ -276,7 +276,7 @@ const PlanoDeNegociosBootstrap = () => {
                   <ul className="space-y-2 text-gray-700">
                     <li>• Coleta dados de crime de 27 estados brasileiros</li>
                     <li>• Normaliza formatos heterogêneos em taxonomia única</li>
-                    <li>• Geocodifica endereços com precisão de 50m</li>
+                    <li>• Geocodifica moradas com precisão de 50m</li>
                     <li>• Calcula scores de risco em tempo real</li>
                     <li>• Fornece API REST simples e rápida</li>
                   </ul>
@@ -316,7 +316,7 @@ const PlanoDeNegociosBootstrap = () => {
                       <Globe className="text-purple-600" size={24} />
                     </div>
                     <h4 className="font-bold text-sm">3. Geocodifica</h4>
-                    <p className="text-xs text-gray-600">Converte endereços em coordenadas</p>
+                    <p className="text-xs text-gray-600">Converte moradas em coordenadas</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-2">
@@ -447,12 +447,12 @@ const PlanoDeNegociosBootstrap = () => {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-2xl font-bold mb-4 text-purple-600">
                 <Users className="inline mr-2" />
-                Equipe & Estrutura de Custos
+                Equipa & Estrutura de Custos
               </h2>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold mb-3 text-purple-700">👥 Nossa Equipe</h3>
+                  <h3 className="text-xl font-bold mb-3 text-purple-700">👥 Nossa Equipa</h3>
                   <div className="space-y-3">
                     <div className="bg-white p-3 rounded border">
                       <p className="font-bold text-purple-800">Desenvolvedor Full-Stack Senior</p>
