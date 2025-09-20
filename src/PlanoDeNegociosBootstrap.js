@@ -41,10 +41,13 @@ const PlanoDeNegociosBootstrap = () => {
     investimento: 0,
     equipe: 3,
     prazo: 90,
-    metaMensal: 5000,
+    metaMensal: 26000,
     startDate: '29/09/2025',
-    custoEquipe: 4430,
-    custoTrimestral: 13290
+    endDate: '29/12/2025',
+    custoEquipe: 23000,
+    custoTrimestral: 69000,
+    version: '2.0',
+    lastUpdate: '20 de Setembro de 2025'
   };
 
   const sections = [
@@ -69,7 +72,7 @@ const PlanoDeNegociosBootstrap = () => {
           <div className="mt-4 flex flex-wrap gap-4">
             <div className="bg-white/20 rounded-lg px-4 py-2">
               <span className="text-sm opacity-75">Investimento</span>
-              <p className="text-2xl font-bold">€{metrics.investimento}</p>
+              <p className="text-2xl font-bold">R${metrics.investimento}</p>
             </div>
             <div className="bg-white/20 rounded-lg px-4 py-2">
               <span className="text-sm opacity-75">Equipe</span>
@@ -81,7 +84,7 @@ const PlanoDeNegociosBootstrap = () => {
             </div>
             <div className="bg-white/20 rounded-lg px-4 py-2">
               <span className="text-sm opacity-75">Meta MRR</span>
-              <p className="text-2xl font-bold">€{metrics.metaMensal}</p>
+              <p className="text-2xl font-bold">R${metrics.metaMensal.toLocaleString()}</p>
             </div>
           </div>
           <p className="mt-4 text-sm opacity-75">
@@ -258,6 +261,109 @@ const PlanoDeNegociosBootstrap = () => {
           </div>
         )}
 
+        {/* Nossa Solução */}
+        {activeSection === 'solucao' && (
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold mb-4 text-green-600">
+                <CheckCircle className="inline mr-2" />
+                Crime Data API - Nossa Solução
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-3 text-green-700">🎯 O Que Fazemos</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Coleta dados de crime de 27 estados brasileiros</li>
+                    <li>• Normaliza formatos heterogêneos em taxonomia única</li>
+                    <li>• Geocodifica endereços com precisão de 50m</li>
+                    <li>• Calcula scores de risco em tempo real</li>
+                    <li>• Fornece API REST simples e rápida</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-3 text-blue-700">🚀 Como É Diferente</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• <strong>Automatizado:</strong> Sem consultoria manual</li>
+                    <li>• <strong>Escalável:</strong> Resposta em menos de 2 segundos</li>
+                    <li>• <strong>Transparente:</strong> Sempre mostra fonte e idade do dado</li>
+                    <li>• <strong>Acessível:</strong> R$ 1.580/mês vs R$ 50k de consultoria</li>
+                    <li>• <strong>Nacional:</strong> Cobertura de todo o Brasil</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-white border-2 border-green-200 rounded-lg p-6">
+                <h3 className="text-xl font-bold mb-4 text-center">Fluxo da Solução</h3>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <div className="text-center">
+                    <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-2">
+                      <Database className="text-green-600" size={24} />
+                    </div>
+                    <h4 className="font-bold text-sm">1. Coleta</h4>
+                    <p className="text-xs text-gray-600">Dados públicos SSP-SP, ISP-RJ, DataSUS</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-2">
+                      <BarChart className="text-blue-600" size={24} />
+                    </div>
+                    <h4 className="font-bold text-sm">2. Processa</h4>
+                    <p className="text-xs text-gray-600">ML corrige subnotificação, normaliza</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-2">
+                      <Globe className="text-purple-600" size={24} />
+                    </div>
+                    <h4 className="font-bold text-sm">3. Geocodifica</h4>
+                    <p className="text-xs text-gray-600">Converte endereços em coordenadas</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-2">
+                      <Shield className="text-indigo-600" size={24} />
+                    </div>
+                    <h4 className="font-bold text-sm">4. Entrega</h4>
+                    <p className="text-xs text-gray-600">API REST com score de risco</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-bold mb-4">Começar com Leads Durante o Desenvolvimento</h3>
+              <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg mb-4">
+                <p className="font-semibold text-yellow-800 mb-2">🎯 Recomendação Principal</p>
+                <p className="text-yellow-700">
+                  Começar com <strong>geração de leads</strong> durante o desenvolvimento para validar demanda
+                  antes de construir a API completa. Use o interesse demonstrado para priorizar funcionalidades.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h4 className="font-bold text-green-800 mb-2">Fase 1: Validação (Dias 1-30)</h4>
+                  <ul className="text-sm text-green-700 space-y-1">
+                    <li>• Landing page simples com caso de uso</li>
+                    <li>• Lista de email "Avise-me quando lançar"</li>
+                    <li>• 100 cold emails/dia para imobiliárias</li>
+                    <li>• Meta: 50 empresas interessadas</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-bold text-blue-800 mb-2">Fase 2: MVP (Dias 31-60)</h4>
+                  <ul className="text-sm text-blue-700 space-y-1">
+                    <li>• API básica com dados de São Paulo</li>
+                    <li>• Dashboard simples para 3 primeiros clientes</li>
+                    <li>• Feedback loops semanais</li>
+                    <li>• Meta: R$ 5.000 MRR</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Modelo de Negócio */}
         {activeSection === 'modelo' && (
           <div className="space-y-6">
@@ -274,19 +380,19 @@ const PlanoDeNegociosBootstrap = () => {
                 </div>
                 <div className="border rounded-lg p-4 hover:shadow-lg transition">
                   <h4 className="font-bold text-lg">🏢 Startup</h4>
-                  <p className="text-3xl font-bold text-green-600 my-2">€297</p>
+                  <p className="text-3xl font-bold text-green-600 my-2">R$1.580</p>
                   <p className="text-sm text-gray-600">/mês</p>
                   <p className="text-xs mt-2">100 consultas + relatórios</p>
                 </div>
                 <div className="border rounded-lg p-4 hover:shadow-lg transition bg-indigo-50 border-indigo-300">
                   <h4 className="font-bold text-lg">💼 Business</h4>
-                  <p className="text-3xl font-bold text-indigo-600 my-2">€997</p>
+                  <p className="text-3xl font-bold text-indigo-600 my-2">R$5.300</p>
                   <p className="text-sm text-gray-600">/mês</p>
                   <p className="text-xs mt-2">Ilimitado + API + Suporte</p>
                 </div>
                 <div className="border rounded-lg p-4 hover:shadow-lg transition">
                   <h4 className="font-bold text-lg">🏆 Enterprise</h4>
-                  <p className="text-3xl font-bold text-purple-600 my-2">€2.997</p>
+                  <p className="text-3xl font-bold text-purple-600 my-2">R$15.900</p>
                   <p className="text-sm text-gray-600">/mês</p>
                   <p className="text-xs mt-2">White label + Consultoria</p>
                 </div>
@@ -310,26 +416,253 @@ const PlanoDeNegociosBootstrap = () => {
                     <tr className="border-b">
                       <td className="p-2">Mês 1</td>
                       <td className="p-2 text-right">10</td>
-                      <td className="p-2 text-right">€500</td>
-                      <td className="p-2 text-right font-bold">€5.000</td>
-                      <td className="p-2 text-right text-green-600">€4.200</td>
+                      <td className="p-2 text-right">R$2.650</td>
+                      <td className="p-2 text-right font-bold">R$26.500</td>
+                      <td className="p-2 text-right text-green-600">R$22.260</td>
                     </tr>
                     <tr className="border-b">
                       <td className="p-2">Mês 3</td>
                       <td className="p-2 text-right">50</td>
-                      <td className="p-2 text-right">€700</td>
-                      <td className="p-2 text-right font-bold">€35.000</td>
-                      <td className="p-2 text-right text-green-600">€32.000</td>
+                      <td className="p-2 text-right">R$3.710</td>
+                      <td className="p-2 text-right font-bold">R$185.500</td>
+                      <td className="p-2 text-right text-green-600">R$169.600</td>
                     </tr>
                     <tr className="border-b bg-green-50">
                       <td className="p-2">Mês 6</td>
                       <td className="p-2 text-right">180</td>
-                      <td className="p-2 text-right">€850</td>
-                      <td className="p-2 text-right font-bold">€153.000</td>
-                      <td className="p-2 text-right text-green-600 font-bold">€141.000</td>
+                      <td className="p-2 text-right">R$4.505</td>
+                      <td className="p-2 text-right font-bold">R$810.900</td>
+                      <td className="p-2 text-right text-green-600 font-bold">R$747.300</td>
                     </tr>
                   </tbody>
                 </table>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Equipe & Custos */}
+        {activeSection === 'equipe' && (
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold mb-4 text-purple-600">
+                <Users className="inline mr-2" />
+                Equipe & Estrutura de Custos
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-3 text-purple-700">👥 Nossa Equipe</h3>
+                  <div className="space-y-3">
+                    <div className="bg-white p-3 rounded border">
+                      <p className="font-bold text-purple-800">Desenvolvedor Full-Stack Senior</p>
+                      <p className="text-sm text-gray-600">React, Node.js, PostgreSQL, AWS</p>
+                      <p className="text-sm font-semibold text-purple-600">R$ 12.000/mês</p>
+                    </div>
+                    <div className="bg-white p-3 rounded border">
+                      <p className="font-bold text-blue-800">Cientista de Dados</p>
+                      <p className="text-sm text-gray-600">Python, ML, ETL, APIs públicas</p>
+                      <p className="text-sm font-semibold text-blue-600">R$ 8.000/mês</p>
+                    </div>
+                    <div className="bg-white p-3 rounded border">
+                      <p className="font-bold text-green-800">Product Manager</p>
+                      <p className="text-sm text-gray-600">Vendas, suporte, roadmap</p>
+                      <p className="text-sm font-semibold text-green-600">R$ 3.000/mês</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-green-50 to-yellow-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-3 text-green-700">💰 Custos Mensais</h3>
+                  <div className="space-y-2">
+                    <div className="flex justify-between">
+                      <span>Salários (3 pessoas)</span>
+                      <span className="font-bold">R$ 23.000</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span>• Full-Stack Developer</span>
+                      <span>R$ 12.000</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span>• Data Scientist</span>
+                      <span>R$ 8.000</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span>• Product Manager</span>
+                      <span>R$ 3.000</span>
+                    </div>
+                    <hr />
+                    <div className="flex justify-between">
+                      <span>Infraestrutura AWS</span>
+                      <span className="font-bold">R$ 800</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Ferramentas (GitHub, etc)</span>
+                      <span className="font-bold">R$ 200</span>
+                    </div>
+                    <hr className="border-2" />
+                    <div className="flex justify-between text-lg font-bold text-red-600">
+                      <span>Total Mensal</span>
+                      <span>R$ 24.000</span>
+                    </div>
+                    <div className="flex justify-between text-sm text-red-500">
+                      <span>90 dias (trimestre)</span>
+                      <span>R$ 72.000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg">
+                <h3 className="font-bold text-yellow-800 mb-2">💡 Como Financiar Sem Investimento</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <p className="font-semibold text-yellow-700">Estratégia de Reembolso:</p>
+                    <ul className="text-sm text-yellow-600 mt-2 space-y-1">
+                      <li>• Custos de desenvolvimento são "empréstimo" da empresa atual</li>
+                      <li>• Reembolso acontece quando atingirmos R$ 30k MRR</li>
+                      <li>• Prioridade 1: Pagar custos, depois distribuir lucros</li>
+                      <li>• Break-even estimado: Mês 4-5</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-yellow-700">Plano B - Redução:</p>
+                    <ul className="text-sm text-yellow-600 mt-2 space-y-1">
+                      <li>• Só 2 pessoas (dev + PM): R$ 15k/mês</li>
+                      <li>• Freelancer data scientist: R$ 3k/projeto</li>
+                      <li>• MVP mais simples: apenas SP + RJ</li>
+                      <li>• Break-even: Mês 3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Cronograma */}
+        {activeSection === 'cronograma' && (
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold mb-4 text-indigo-600">
+                <Calendar className="inline mr-2" />
+                Cronograma de 90 Dias
+              </h2>
+
+              <div className="mb-6 text-center">
+                <div className="inline-flex bg-indigo-100 rounded-lg p-2">
+                  <span className="text-sm font-semibold text-indigo-800">
+                    Início: 29/09/2025 → Entrega: 29/12/2025
+                  </span>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                {/* Mês 1 */}
+                <div className="border-l-4 border-blue-500 pl-6">
+                  <h3 className="text-xl font-bold text-blue-600 mb-3">
+                    📅 Mês 1 (29/09 - 29/10): Fundação & Validação
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <h4 className="font-bold text-blue-800 mb-2">🛠️ Desenvolvimento</h4>
+                      <ul className="text-sm space-y-1">
+                        <li>• ✅ Setup do projeto (React + Node.js)</li>
+                        <li>• ✅ Infraestrutura AWS básica</li>
+                        <li>• ⏳ Coleta dados SSP-SP (80% completo)</li>
+                        <li>• ⏳ API REST basic endpoints</li>
+                        <li>• ⏳ Geocoding service MVP</li>
+                        <li>• ⏳ Landing page funcional</li>
+                      </ul>
+                    </div>
+                    <div className="bg-green-50 p-4 rounded-lg">
+                      <h4 className="font-bold text-green-800 mb-2">📈 Negócio</h4>
+                      <ul className="text-sm space-y-1">
+                        <li>• ✅ Lista de 500 empresas prospect</li>
+                        <li>• ⏳ Cold email campaign (100/dia)</li>
+                        <li>• ⏳ LinkedIn outreach</li>
+                        <li>• 🎯 Meta: 50 leads interessados</li>
+                        <li>• 🎯 Meta: 5 reuniões agendadas</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mês 2 */}
+                <div className="border-l-4 border-green-500 pl-6">
+                  <h3 className="text-xl font-bold text-green-600 mb-3">
+                    📅 Mês 2 (30/10 - 29/11): MVP & Primeiros Clientes
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-green-50 p-4 rounded-lg">
+                      <h4 className="font-bold text-green-800 mb-2">🛠️ Desenvolvimento</h4>
+                      <ul className="text-sm space-y-1">
+                        <li>• 🔄 API completa São Paulo</li>
+                        <li>• 🔄 Dashboard cliente básico</li>
+                        <li>• 🔄 Sistema de autenticação</li>
+                        <li>• 🔄 Documentação API</li>
+                        <li>• 🔄 Testes automatizados</li>
+                      </ul>
+                    </div>
+                    <div className="bg-purple-50 p-4 rounded-lg">
+                      <h4 className="font-bold text-purple-800 mb-2">📈 Negócio</h4>
+                      <ul className="text-sm space-y-1">
+                        <li>• 🔄 Onboarding 3 clientes beta</li>
+                        <li>• 🔄 Pricing strategy refinement</li>
+                        <li>• 🔄 Customer feedback loops</li>
+                        <li>• 🎯 Meta: R$ 5.000 MRR</li>
+                        <li>• 🎯 Meta: 10 clientes ativos</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mês 3 */}
+                <div className="border-l-4 border-purple-500 pl-6">
+                  <h3 className="text-xl font-bold text-purple-600 mb-3">
+                    📅 Mês 3 (30/11 - 29/12): Escala & Otimização
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-purple-50 p-4 rounded-lg">
+                      <h4 className="font-bold text-purple-800 mb-2">🛠️ Desenvolvimento</h4>
+                      <ul className="text-sm space-y-1">
+                        <li>• 🔄 Adicionar Rio de Janeiro</li>
+                        <li>• 🔄 ML para correção de dados</li>
+                        <li>• 🔄 Performance optimization</li>
+                        <li>• 🔄 Advanced analytics</li>
+                        <li>• 🔄 Mobile responsive</li>
+                      </ul>
+                    </div>
+                    <div className="bg-yellow-50 p-4 rounded-lg">
+                      <h4 className="font-bold text-yellow-800 mb-2">📈 Negócio</h4>
+                      <ul className="text-sm space-y-1">
+                        <li>• 🔄 Sales process automation</li>
+                        <li>• 🔄 Content marketing</li>
+                        <li>• 🔄 Partnership discussions</li>
+                        <li>• 🎯 Meta: R$ 26.000 MRR</li>
+                        <li>• 🎯 Meta: 50 clientes ativos</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg p-6">
+                <h3 className="text-xl font-bold mb-4 text-center">🏁 Milestone Final - 29/12/2025</h3>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold">R$ 26k</div>
+                    <div className="text-sm opacity-75">MRR atingido</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold">50+</div>
+                    <div className="text-sm opacity-75">Clientes ativos</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold">SP+RJ</div>
+                    <div className="text-sm opacity-75">Estados cobertos</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -548,24 +881,62 @@ const PlanoDeNegociosBootstrap = () => {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-2xl font-bold mb-4 text-indigo-600">
                 <Target className="inline mr-2" />
-                Checklist Dia 1 - 29/09/2025
+                Status Atual - 20/09/2025
               </h2>
 
+              <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-lg mb-6">
+                <h3 className="font-bold text-green-800 mb-2">✅ O Que Já Temos Pronto</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <p className="font-semibold text-green-700">Documentação:</p>
+                    <ul className="text-sm text-green-600 space-y-1">
+                      <li>• ✅ Plano de negócios completo</li>
+                      <li>• ✅ Análise técnica detalhada</li>
+                      <li>• ✅ Estrutura de custos definida</li>
+                      <li>• ✅ Cronograma de 90 dias</li>
+                      <li>• ✅ Estratégia de preços</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-green-700">Desenvolvimento:</p>
+                    <ul className="text-sm text-green-600 space-y-1">
+                      <li>• ✅ Repositório GitHub público criado</li>
+                      <li>• ✅ Aplicação React funcional</li>
+                      <li>• ✅ Deploy automático no Render</li>
+                      <li>• ✅ Design responsivo com Tailwind</li>
+                      <li>• ✅ Landing page demonstrativa</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
               <div className="space-y-2">
+                <h3 className="font-bold text-indigo-800 mb-4">📅 Próximos 9 Dias (até 29/09)</h3>
                 {[
-                  { task: 'Criar repositório GitHub privado', time: '10 min', done: false },
-                  { task: 'Setup Node.js + React', time: '1 hora', done: false },
-                  { task: 'Conta AWS free tier', time: '30 min', done: false },
-                  { task: 'Baixar dados SSP-SP', time: '2 horas', done: false },
-                  { task: 'Landing page simples', time: '3 horas', done: false },
-                  { task: 'Lista 100 empresas cold email', time: '1 hora', done: false },
-                  { task: 'LinkedIn empresa', time: '30 min', done: false },
-                  { task: 'Sprint planning Trello', time: '1 hora', done: false }
+                  { task: 'Finalizar especificações técnicas da API', time: '2 dias', done: false, priority: 'alta' },
+                  { task: 'Setup Node.js + Express backend', time: '1 dia', done: false, priority: 'alta' },
+                  { task: 'Configurar infraestrutura AWS', time: '1 dia', done: false, priority: 'alta' },
+                  { task: 'Baixar e processar dados SSP-SP', time: '2 dias', done: false, priority: 'alta' },
+                  { task: 'Lista de 500 empresas prospect', time: '1 dia', done: false, priority: 'média' },
+                  { task: 'Preparar templates de cold email', time: '1 dia', done: false, priority: 'média' },
+                  { task: 'Configurar LinkedIn da empresa', time: '0.5 dia', done: false, priority: 'baixa' },
+                  { task: 'Setup Trello para gestão', time: '0.5 dia', done: false, priority: 'baixa' }
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center justify-between p-3 bg-gray-50 rounded hover:bg-gray-100 transition">
+                  <div key={idx} className={`flex items-center justify-between p-3 rounded hover:bg-gray-100 transition ${
+                    item.priority === 'alta' ? 'bg-red-50 border border-red-200' :
+                    item.priority === 'média' ? 'bg-yellow-50 border border-yellow-200' :
+                    'bg-gray-50 border border-gray-200'
+                  }`}>
                     <div className="flex items-center gap-3">
-                      <input type="checkbox" className="w-5 h-5 text-indigo-600" />
-                      <span>{item.task}</span>
+                      <input type="checkbox" className="w-5 h-5 text-indigo-600" checked={item.done} readOnly />
+                      <span className={item.done ? 'line-through text-gray-500' : ''}>{item.task}</span>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        item.priority === 'alta' ? 'bg-red-100 text-red-700' :
+                        item.priority === 'média' ? 'bg-yellow-100 text-yellow-700' :
+                        'bg-gray-100 text-gray-700'
+                      }`}>
+                        {item.priority}
+                      </span>
                     </div>
                     <span className="text-sm text-gray-500">{item.time}</span>
                   </div>
@@ -589,7 +960,7 @@ const PlanoDeNegociosBootstrap = () => {
                 </div>
                 <div className="bg-white/20 rounded p-3">
                   <p className="text-2xl font-bold">90 dias</p>
-                  <p className="text-sm">€5k MRR ou pivot</p>
+                  <p className="text-sm">R$26k MRR ou pivot</p>
                 </div>
               </div>
               <p className="mt-6 text-center italic">
@@ -606,9 +977,12 @@ const PlanoDeNegociosBootstrap = () => {
         <div className="container mx-auto px-4 text-center">
           <p className="mb-2">Crime Data API Brasil - Plano Bootstrap</p>
           <p className="text-sm text-gray-400">
-            Documento atualizado: 18 de Setembro de 2025
+            Documento atualizado: {metrics.lastUpdate} - Versão {metrics.version}
           </p>
           <p className="text-xs text-gray-500 mt-4">
+            Desenvolvido por <strong>Straford Geek Ltd</strong> - Software Solutions
+          </p>
+          <p className="text-xs text-gray-400 mt-2">
             Todos os termos técnicos explicados para alinhamento entre sócios
           </p>
         </div>
